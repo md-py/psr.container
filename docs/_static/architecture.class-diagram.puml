@@ -10,8 +10,8 @@ skinparam lineType ortho
 
 package psr.container {
   interface ContainerInterface {
-    + get(id_: str) -> object
-    + has(id_: str) -> bool
+    + get(id_: typing.Union[str, type]) -> object
+    + has(id_: typing.Union[str, type]) -> bool
   }
   interface ContainerExceptionInterface {}
   interface NotFoundExceptionInterface extends ContainerExceptionInterface {}

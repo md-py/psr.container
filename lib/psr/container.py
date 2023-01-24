@@ -1,8 +1,10 @@
 """ PHP PSR-11 Container interface port (see https://www.php-fig.org/psr/psr-11/). """
 
+import typing
+
 
 # Metadata
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 __all__ = (
   # Metadata
   '__version__',
@@ -16,7 +18,7 @@ __all__ = (
 # Contract
 class ContainerInterface:
     """ Describes the interface of a container that exposes methods to read its entries. """
-    def get(self, id_: str) -> object:
+    def get(self, id_: typing.Union[str, type]) -> object:
         """
         Finds an entry of the container by its identifier and returns it.
 
@@ -29,7 +31,7 @@ class ContainerInterface:
         """
         raise NotImplementedError
 
-    def has(self, id_: str) -> bool:
+    def has(self, id_: typing.Union[str, type]) -> bool:
         """
         Returns true if the container can return an entry for the given identifier.
         Returns false otherwise.

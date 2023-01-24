@@ -29,4 +29,4 @@ Read documentation with examples: https://development.md.land/python/psr.contain
 Take a look for [md.di](../md.di/) — the first implementation.
 
 [psr-url]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md
-[architecture-overview]: docs/_static/architecture.class-diagram.png
+[architecture-overview]: docs/_static/architecture.class-diagram.svg
