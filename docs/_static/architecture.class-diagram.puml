@@ -1,0 +1,22 @@
+@startuml
+
+skinparam class {
+  BackgroundColor #ebebeb
+  ArrowColor      #333
+  BorderColor     #333
+}
+
+skinparam lineType ortho
+
+package psr.container {
+  interface ContainerInterface {
+    + get(id_: str) -> object
+    + has(id_: str) -> bool
+  }
+  interface ContainerExceptionInterface {}
+  interface NotFoundExceptionInterface extends ContainerExceptionInterface {}
+
+  ContainerInterface -- ContainerExceptionInterface : "raises >"
+}
+
+@enduml
